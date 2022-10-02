@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.container__image {
+  width: 100%;
+}
+
+.container__image img {
+  width: 100%;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+}
+
+.container__slideLeft {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.container__slideLeft:hover {
+  background-color: rgba(6, 87, 8, 0.5);
+}
+
+.container__slideRight {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.container__slideRight:hover {
+  background-color: rgba(6, 87, 8, 0.5);
+}
+
+.circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+  margin-top: 2%;
+}
+
+.circles__circle {
+  width: 20px;
+  height: 20px;
+  background-color: #5c6b6b;
+  border-radius: 50%;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.active {
+  background-color: #065708;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .circles__circle {
+    width: 10px;
+    height: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
